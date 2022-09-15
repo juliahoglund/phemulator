@@ -17,7 +17,7 @@ RUN cd /srv/shiny-server/ && \
 #COPY . /srv/shiny-server/app/
 EXPOSE 3838
 
-CMD ["R", "-e", "shiny::runApp('/srv/shiny-server/app/', host = '127.0.0.1', port = 8787)"]
+CMD ["R", "-e", "shiny::runApp('/srv/shiny-server/app/', host = '0.0.0.0', port = 8787)"]
 
-# docker build -t NBISweden/phemulator:v1.0.0 .
-# docker run --rm -p 8787:8787 NBISweden/phemulator:v1.0.0
+# docker build -t nbisweden/phemulator:v1.0.0 .
+# docker run --rm -p 8787:8787 nbisweden/phemulator:v1.0.0

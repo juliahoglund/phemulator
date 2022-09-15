@@ -16,7 +16,8 @@ library(kableExtra)
 ui <- fluidPage(
 
   # Application title
-  titlePanel("Phemulator"),
+  titlePanel(title = "Phemulator v1.0.0", windowTitle = paste0(title, " - Marcin Kierczak, 2022")),
+  h3('Marcin Kierczak, 2022'),
 
   # Sidebar with a slider input for number of bins
   sidebarLayout(
