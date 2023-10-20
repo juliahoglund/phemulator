@@ -36,6 +36,7 @@ docker run --rm -p 8787:8787 nbisweden/phemulator:v1.0.0
 
 than go to browser and type `http://0.0.0.0:8787` 
 Now, you can play with parameters and select your simulation parameters.
+<img src="assets/phemulator.png">
 
 ## Simulation Tool User Documentation phemulator.py
 
