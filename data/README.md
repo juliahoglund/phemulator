@@ -43,7 +43,8 @@ Hewett, A.M., Stoffel, M.A., Peters, L. et al. Selection, recombination and popu
    * phenotypes_simulation_Rum_recoded_repos.bgen_cds_test.bed_10-20-2023.csv
 
    The `simulation...` file contains the following info:
-   ```
+
+```
   {
     "chromosome": "1",
     "start": 27590000,
@@ -57,7 +58,8 @@ variant_name,chr,pos,type,eff,maf
 cela1_red_15_13697173,1,27968376,rare,2.2034376251895638,0.029885057471264367
 cela1_red_15_13803325,1,27976402,rare,2.377858260463359,0.02315270935960591
 cela1_red_15_14287548,1,28498472,common,0.2934033455531529,0.41986863711001643
-   ```
+```
+
 First part within `{` and `}` is region description in json format. Here, `NM_TEST2` fullfilled your simulation criteria and
 has been used (note, the same region may be used for simulations several times). It contained 2 rare (based on provided threshold) variants and
 13 common variants and thus was valid for simulation (default requirement is 1 common variant and 2 rare ones).
