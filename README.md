@@ -1,25 +1,47 @@
 [![build](https://github.com/NBISweden/phemulator/actions/workflows/main.yml/badge.svg)](https://github.com/NBISweden/phemulator/actions/workflows/main.yml)
 
 # phemulator
-Phemulator tool for visualising GWAS effect sizes in A_Johansson_PP
 
-# Install and run:
+## Background
+Phemulator is a tool for simulating phenotypes on top of real-world genotyping or sequencing data.
+Through a number of parameters, user controls the genotype-phenotype relationship, i.e. the tool allows for simulating desired
+genetic architectures (currently limited to additive effects only) using real population data. 
+The Phemulator tool has been developed by Marcin Kierczak, National Bioinformatics Infrastructure, Sweden (NBIS) in a 
+partner project with research group led by prof. Åsa Johansson, IGP, Uppsala University, Sweden.
 
+## Motivation
+We wanted a tool that will enable us to simulate phenotypes based on existing genomic data and evaluate different tools that are widely
+used for genome-wide association studies (GWAS), including classical tools that evaluate effects of single common variants as well as so-called
+burden tests or kernel association tests used for discovering rare variants associated to phenotypes. This need has emerged in our previous 
+work, e.g.:
+
+* Kierczak, M., Rafati, N., Höglund, J. et al. Contribution of rare whole-genome sequencing variants to plasma protein levels and the missing heritability. Nat Commun 13, 2532 (2022). [https://doi.org/10.1038/s41467-022-30208-8](https://doi.org/10.1038/s41467-022-30208-8)
+
+## What Phemulator can do for me?
+* you need you genotypes for a number of individuals in bgen-1.2 8-bit format.
+* you need a number of regions, e.g. CDS defined in a bed file.
+* you next can run our conteinerized Shiny app that will help you selecting simulation parameters,
+* you decide how many common and how many rare alleles in a region (e.g. CDS) contribute to phenotype and how much (effect size),
+* based on this, the tool scans your genomes region by region and if there are enough common/rare variants, it simulates phenotype
+* if you run a number of simulations, all parameters and outputs will be saved as json/csv
+* you can use your simulated phenotypes to evaluate different association models using, e.g. an excellent [rvtests](http://zhanxw.github.io/rvtests/#input-files) tool
+
+
+## Containerized Shiny app
+
+You need to have [Docker](https://docker.com) installed on your machine. Next, in Terminal you execute: 
 ```
 docker run --rm -p 8787:8787 nbisweden/phemulator:v1.0.0
 ```
 
-than go to browser and type `http://0.0.0.0:8787`
+than go to browser and type `http://0.0.0.0:8787` 
+Now, you can play with parameters and select your simulation parameters.
 
-Certainly! Here's the user documentation for your Simulation Tool in Markdown format:
-
----
-
-# Simulation Tool User Documentation
+## Simulation Tool User Documentation phemulator.py
 
 ## Introduction
 
-The Simulation Tool is a Python script designed for simulating phenotypes based on genetic variants and user-defined settings. This documentation will guide you through the usage of the tool, its features, and how to customize the simulation.
+The Phemulator Simulation Tool is a Python script designed for simulating phenotypes based on genetic variants and user-defined settings. This documentation will guide you through the usage of the tool, its features, and how to customize the simulation.
 
 ## Table of Contents
 
@@ -31,7 +53,7 @@ The Simulation Tool is a Python script designed for simulating phenotypes based 
 
 ## Installation <a name="installation"></a>
 
-Before you can use the Simulation Tool, you need to make sure you have the required dependencies installed:
+Before you can use the tool, you need to make sure you have the required dependencies installed:
 
 - Python (3.6 or higher)
 - PyBGEN
@@ -46,7 +68,7 @@ pip install pybgen numpy pandas
 
 ## Usage <a name="usage"></a>
 
-To use the Simulation Tool, follow these steps:
+To use the Phemulator Simulation Tool, follow these steps:
 
 1. Open your terminal or command prompt.
 
@@ -101,8 +123,4 @@ The tool will generate output files including:
 - A CSV file containing simulated phenotype data.
 - You can find these files in the specified output directory.
 
-That's it! You can use the Simulation Tool to generate simulated phenotypes based on your genetic data and custom settings.
-
----
-
-You can customize this user documentation according to your specific tool and audience. This guide provides an overview of the tool's functionality and how to use it.
+That's it! You can use the Phemulator Simulation Tool to generate simulated phenotypes based on your genetic data and custom settings.
