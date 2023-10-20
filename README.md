@@ -125,4 +125,6 @@ The tool will generate output files including:
 - A CSV file containing simulated phenotype data.
 - You can find these files in the specified output directory.
 
+Have a look at our example inside the `data/` and follow `README` to better understand the output.
+
 That's it! You can use the Phemulator Simulation Tool to generate simulated phenotypes based on your genetic data and custom settings.
