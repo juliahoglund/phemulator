@@ -81,7 +81,7 @@ To use the Phemulator Simulation Tool, follow these steps:
 For example:
 
 ```bash
-python simulation_tool.py --name my_simulation --bed_regions_path my_regions.bed --bgen_file_path my_data.bgen
+python phemulator.py --name my_simulation --bed_regions_path my_regions.bed --bgen_file_path my_data.bgen
 ```
 
 The tool will start the simulation based on the provided settings and input data.
