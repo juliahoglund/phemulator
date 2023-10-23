@@ -74,7 +74,7 @@ To use the Phemulator Simulation Tool, follow these steps:
 
 1. Open your terminal or command prompt.
 
-2. Navigate to the directory containing the `simulation_tool.py` script.
+2. Navigate to the directory containing the `phemulator.py` script.
 
 3. Run the script with the desired command-line arguments (explained below).
 
