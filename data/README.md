@@ -11,11 +11,12 @@ Hewett, A.M., Stoffel, M.A., Peters, L. et al. Selection, recombination and popu
 4. Some made up regions are provided in `cds_test.bed`.
 5. You are now ready to use Phemulator:
    ```
-   ./bgenix -g ~/Dropbox/WABI/Projects/Johansson_PP/phemulator/data/Rum_recoded_repos.bgen --index
+   python phemulator.py --name my_simulation --bed_regions_path my_regions.bed --bgen_file_path my_data.bgen
    ```
    
    And you should see something like this chunk below. Ignore the error -- it comes from the fact that we have sex chromosomes included. You can
-   redirect `stderr` to `/dev/null` if you do not like it: `./bgenix -g ~/Dropbox/WABI/Projects/Johansson_PP/phemulator/data/Rum_recoded_repos.bgen --index 2>/dev/null`  
+   redirect `stderr` to `/dev/null` if you do not like it: `python phemulator.py --name my_simulation --bed_regions_path my_regions.bed --bgen_file_path my_data.bgen
+ 2>/dev/null`  
    
    ```
    ERROR. Chromosome 33, position 79254683: data/Rum_recoded_repos.bgen: only accepting ploidy of 2. Skipping over...
