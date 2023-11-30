@@ -18,11 +18,11 @@ work, e.g.:
 * Kierczak, M., Rafati, N., Höglund, J. et al. Contribution of rare whole-genome sequencing variants to plasma protein levels and the missing heritability. Nat Commun 13, 2532 (2022). [https://doi.org/10.1038/s41467-022-30208-8](https://doi.org/10.1038/s41467-022-30208-8)
 
 ## What Phemulator can do for me?
-* you need you genotypes for a number of individuals in bgen-1.2 8-bit format.
+* you need your genotypes for a number of individuals in bgen-1.2 8-bit format.
 * you need a number of regions, e.g. CDS defined in a bed file.
-* you next can run our conteinerized Shiny app that will help you selecting simulation parameters,
+* you next can run our containerized Shiny app that will help you selecting simulation parameters,
 * you decide how many common and how many rare alleles in a region (e.g. CDS) contribute to phenotype and how much (effect size),
-* based on this, the tool scans your genomes region by region and if there are enough common/rare variants, it simulates phenotype
+* based on this, the tool scans your genome region by region and if there are enough common/rare variants, it simulates a phenotype
 * if you run a number of simulations, all parameters and outputs will be saved as json/csv
 * you can use your simulated phenotypes to evaluate different association models using, e.g. an excellent [rvtests](http://zhanxw.github.io/rvtests/#input-files) tool
 
@@ -34,7 +34,7 @@ You need to have [Docker](https://docker.com) installed on your machine. Next, i
 docker run --rm -p 8787:8787 nbisweden/phemulator:v1.0.0
 ```
 
-than go to browser and type `http://0.0.0.0:8787` 
+then, go to browser and type `http://0.0.0.0:8787` 
 Now, you can play with parameters and select your simulation parameters.
 
 ![](assets/phemulator.png?raw=true)
