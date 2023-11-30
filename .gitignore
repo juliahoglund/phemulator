@@ -39,3 +39,10 @@ vignettes/*.pdf
 .Renviron
 data/Rum*
 data/plink*
+.DS_Store
+data/Argyll_repos.bed
+data/Argyll_repos.bim
+data/Argyll_repos.fam
+data/README_data.md
+data/SNP_cM_positions.txt
+*.zip
